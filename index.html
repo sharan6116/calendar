@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calendar Picker</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f2f2;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        .container {
+            background: white;
+            width: 400px;
+            margin: auto;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 18px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 20px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>📅 Calendar Picker</h1>
+
+    <form method="POST">
+
+        <p>Select a date:</p>
+
+        <input type="date" name="date" required>
+
+        <br>
+
+        <button type="submit">Select Date</button>
+
+    </form>
+
+    {% if selected_date %}
+
+        <h2>Selected Date</h2>
+        <h3>{{ selected_date }}</h3>
+
+    {% endif %}
+
+</div>
+
+</body>
+</html>
